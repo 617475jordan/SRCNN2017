@@ -25,7 +25,7 @@ public:
 #define colorRad  2
 #define maxPyrLevel 6;
 #define photoNum 14 //图片个数
-#define inputString  "image//%d.png"
+#define inputString  "src//%d.jpg"
 #define outputString "dst//%d.png"
 #define scale 2 //放大倍数
 	Mat elemet = getStructuringElement(MORPH_RECT, Size(3, 3), Point(-1, -1));

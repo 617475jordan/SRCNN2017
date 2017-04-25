@@ -12,7 +12,7 @@ int main()
 	char filename[photoNum];
 	char outname[photoNum];
 	mainHead mainHead;
-	for (int i = 10; i <= photoNum+10; i++)
+	for (int i = 0; i <= photoNum+10; i++)
 	{
 		sprintf(filename, inputString, i);
 		Mat image0;
@@ -37,7 +37,8 @@ int main()
 			resize(image0, image0, imageSize);
 
 		}
-		imshow("src", image0);
+		resize(image0, out, Size(image0.cols * 2, image0.rows * 2));
+		imshow("src", out);
 		/*****removing haze and image Enhancement*/
 		imageEnhancement imageEnhancement;
 		image0=imageEnhancement.SimplestCB(image0, 1);
